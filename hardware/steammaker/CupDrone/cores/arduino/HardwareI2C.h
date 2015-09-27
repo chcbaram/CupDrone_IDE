@@ -24,28 +24,36 @@
  * SOFTWARE.
  *****************************************************************************/
 
-/**
- *  @brief Arduino-style PWM implementation.
- */
+
 
 #include "libpandora_types.h"
-#include "timer.h"
+#include "i2c.h"
 
 #include "boards.h"
-#include "pwm.h"
 
-void pwmWrite(uint8 pin, uint16 duty_cycle) 
-{
-    timer_dev *dev = PIN_MAP[pin].timer_device;
-    uint16 duty_out;
+#ifndef _HARDWAREI2C_H_
+#define _HARDWAREI2C_H_
 
-    if (pin >= BOARD_NR_GPIO_PINS || dev == NULL || dev->type == TIMER_BASIC) {
-        return;
-    }
 
-    if( duty_cycle > 1000 ) duty_cycle = 1000;
 
-    duty_out = duty_cycle * 0xFFFF / 1000;
 
-    timer_set_compare(dev, PIN_MAP[pin].timer_channel, duty_out);
-}
+
+class HardwareI2C {
+public:
+
+    HardwareI2C(uint32 i2c_num);
+
+
+    void begin(void);
+
+    int32 read(uint8 DevAddr, uint8 RegAddr, uint8 *data, uint32 length);
+    int32 write(uint8 DevAddr, uint8 RegAddr, uint8 *data, uint32 length);
+private:
+    i2c_dev *i2c_d;
+};
+
+
+extern HardwareI2C HwI2C;
+
+#endif
+

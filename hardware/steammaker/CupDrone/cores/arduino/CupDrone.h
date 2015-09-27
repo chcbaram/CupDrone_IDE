@@ -52,6 +52,13 @@
 #define BOARD_LED1_PIN          28//PB5
 
 
+#define BOARD_PWM_M0          	6
+#define BOARD_PWM_M1          	30
+#define BOARD_PWM_M2          	7
+#define BOARD_PWM_M3          	9
+
+
+
 /* Total number of GPIO pins that are broken out to headers and
  * intended for general use. */
 #define BOARD_NR_GPIO_PINS      31//26//44

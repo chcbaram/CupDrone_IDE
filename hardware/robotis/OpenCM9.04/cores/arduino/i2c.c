@@ -188,7 +188,7 @@ static void i2c_irq_handler(i2c_dev *dev) {
              */
             if (msg->length != 1) {
                 i2c_write(dev, msg->data[msg->xferred++]);
-            }
+             }
         }
         sr1 = sr2 = 0;
     }

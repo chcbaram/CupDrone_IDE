@@ -25,6 +25,7 @@
  *****************************************************************************/
 
 #include <stdint.h>
+ #include <inttypes.h>
 #include "wirish.h"
 
 void setup();

@@ -32,13 +32,21 @@
 
 #ifndef _LIBMAPLE_TYPES_H_
 #define _LIBMAPLE_TYPES_H_
+ 
+#include <inttypes.h>
 
 #define NVIC_BASE                       ((struct nvic_reg_map*)0xE000E100)
 
-typedef unsigned char uint8;
-typedef unsigned short uint16;
-typedef unsigned int uint32;
-typedef unsigned long long uint64;
+//typedef unsigned char uint8;
+//typedef unsigned short uint16;
+//typedef unsigned int uint32;
+//typedef unsigned long long uint64;
+
+#define uint8     uint8_t 
+#define uint16    uint16_t
+#define uint32    uint32_t
+#define uint64    uint64_t
+
 
 typedef signed char int8;
 typedef short int16;
