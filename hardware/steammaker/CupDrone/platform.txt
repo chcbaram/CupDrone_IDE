@@ -77,17 +77,17 @@ recipe.size.regex=\.text\s+([0-9]+).*
 # -------------------
 
 
-tools.stm32ld.cmd=stm32ld
-tools.stm32ld.cmd.windows=stm32ld.exe
+tools.stm32ld.cmd=stm32ld_cupdrone
+tools.stm32ld.cmd.windows=stm32ld_cupdrone.exe
 tools.stm32ld.cmd.path={runtime.ide.path}/hardware/tools
 
 tools.stm32ld.upload.params.verbose=-v
 tools.stm32ld.upload.params.quiet=-q
-tools.stm32ld.upload.pattern="{cmd.path}/{cmd}"  {serial.port} 115200 "{build.path}/{build.project_name}.bin" "1" "opencm"
+tools.stm32ld.upload.pattern="{cmd.path}/{cmd}"  {serial.port} 115200 "{build.path}/{build.project_name}.bin" "1" "cupdrone"
 
 tools.stm32ld.program.params.verbose=-v
 tools.stm32ld.program.params.quiet=-q
-tools.stm32ld.program.pattern="{cmd.path}/{cmd}"  {serial.port} 115200 "{build.path}/{build.project_name}.bin" "1" "opencm"
+tools.stm32ld.program.pattern="{cmd.path}/{cmd}"  {serial.port} 115200 "{build.path}/{build.project_name}.bin" "1" "cupdrone"
 
 tools.stm32ld.erase.params.verbose=-v -v -v -v
 tools.stm32ld.erase.params.quiet=-q -q
