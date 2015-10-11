@@ -1,10 +1,5 @@
-;------------------------------------------------------------------------------
-; ROBOTIS CO.,LTD. Comunication Device Class driver (CDC) INF FILE
-; (C)2013 Copyright ROBOTIS CO.,LTD.
-;------------------------------------------------------------------------------
-
 [DefaultInstall]
-CopyINF=ROBOTIS_CDC_DRV.inf
+CopyINF=CUPDRONE_CDC_DRV.inf
 
 
 [Version]
@@ -25,10 +20,10 @@ DefaultDestDir = 12
 ;            VID/PID Settings
 ;------------------------------------------------------------------------------
 [DeviceList.NT]
-%DESCRIPTION%=DriverInstall,USB\VID_FFF1&PID_FF48
+%DESCRIPTION%=DriverInstall,USB\VID_FFF2&PID_FF49
 
 [DeviceList.NTamd64]
-%DESCRIPTION%=DriverInstall,USB\VID_FFF1&PID_FF48
+%DESCRIPTION%=DriverInstall,USB\VID_FFF2&PID_FF49
 
 [DriverInstall.NT]
 Include=mdmcpq.inf
